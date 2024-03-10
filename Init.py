@@ -173,5 +173,5 @@ def Time():
 
 # - Initiated
 if __name__ == "__main__":
-    Web.run(debug=True, host='10.0.0.148')
+    Web.run(debug=True, host='0.0.0.0')
     
