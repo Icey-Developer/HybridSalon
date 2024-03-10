@@ -88,7 +88,7 @@ $(document).ready(() => {
       console.log(pack[0]);
   
       // Fetch unavailable times for the selected date
-      Get_Unavailable("http://10.0.0.148:5000/Unavailable/Date")
+      Get_Unavailable("https://blb.onrender.com/Unavailable/Date")
       .then(res => {
           // Process the unavailable times
           function Get_Sep(text) {
@@ -133,7 +133,7 @@ $(document).ready(() => {
 
     let first_day = new Date(year, month);
 
-    const times = Get_Unavailable("http://10.0.0.148:5000/Unavailable/Date").then((res) => {
+    const times = Get_Unavailable("https://blb.onrender.com/Unavailable/Date").then((res) => {
       function Get_Sep(text) {
         let s = text.split(" ")
         return s
