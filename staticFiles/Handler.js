@@ -109,7 +109,7 @@ class Booking {
     )
   }
   Get() {
-    this.xhr.open('GET', 'http://10.0.0.148:5000/Redirect:About');
+    this.xhr.open('GET', 'https://blb.onrender.com/Redirect:About');
     this.xhr.send();
 
     this.xhr.onreadystatechange = () => {
@@ -141,7 +141,7 @@ class create {
   }
 
   Style() {
-    const api = Get_Econ("http://10.0.0.148:5000/api/show").then(jsx => {
+    const api = Get_Econ("https://blb.onrender.com/api/show").then(jsx => {
       $.each(jsx, function (item, index) {
         const [Sect, h2, Main] = [document.createElement("section"), document.createElement("h2"), document.querySelector(".Braids")]
         h2.innerHTML = item
