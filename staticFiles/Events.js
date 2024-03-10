@@ -59,7 +59,7 @@ $(document).ready(function () {
     
     $(".Proceed").click(function() {
       basicTimeline.play();
-      const xhr = new Booking("http://10.0.0.148:5000/Redirect:About")
+      const xhr = new Booking("https://blb.onrender.com/Redirect:About")
       // Example usage
       
       const postData = _OXB8user;
