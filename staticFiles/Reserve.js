@@ -224,7 +224,7 @@ $(document).ready(() => {
   TimeRange = document.querySelector(".C5")
 
   // - Request Data
-  time = Get_Time("http://10.0.0.148:5000/Get/Available-time").then((res) => {
+  time = Get_Time("https://blb.onrender.com/Get/Available-time").then((res) => {
 
     TimeRange.children[1].children[0].innerHTML = res[0]
 
