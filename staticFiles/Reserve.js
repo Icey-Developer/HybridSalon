@@ -220,11 +220,11 @@ $(document).ready(() => {
 
 //SECTION - Date
 $(document).ready(() => {
-  // - Time
-  TimeRange = document.querySelector(".C5")
-
-  // - Request Data
-  time = Get_Time("https://blb.onrender.com/Get/Available-time").then((res) => {
+    // - Time
+    TimeRange = document.querySelector(".C5")
+    
+    // - Request Data
+    time = Get_Time("https://blb.onrender.com/Get/Available-time").then((res) => {
 
     TimeRange.children[1].children[0].innerHTML = res[0]
 
