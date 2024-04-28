@@ -179,7 +179,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 5px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .month-list > div {
     display: grid;
@@ -197,6 +197,8 @@
     color: var(--dark-text);
     transform: scale(0.9);
     transition: all 0.2s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
   }
   .month-list.show {
     visibility: visible;
@@ -204,9 +206,9 @@
     transition: 0.6s ease-in-out;
     animation: to-left .71s forwards;
     background-color: white;
-    border-top: 2px solid black;
-    
+    border: 2px dashed hotpink;
   }
+
   .month-list.hideonce{
     visibility: hidden;
   }
@@ -248,11 +250,11 @@
   }
   @keyframes to-left {
     0% {
-      transform: translatex(230%);
+      transform: translatex(0%);
       opacity: 1;
     }
     100% {
-      transform: translatex(0);
+      transform: translatex(0) translatey(-80%); 
       opacity: 1;
       top: 5px;
     }
