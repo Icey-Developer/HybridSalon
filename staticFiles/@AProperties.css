@@ -53,7 +53,7 @@
 
 
 .Background {
-    background: url(./src/Background.png);
+    background: fixed radial-gradient(hotpink, white);
 }
 
 .Form-Contingent input, input:active {
@@ -85,6 +85,9 @@
     text-align: center;
     border-right: 2px solid #ffffff;
     
+}
+.Form-Contingent input::placeholder {
+    color: white;
 }
 .Form-Contingent input:focus, input:active {
     border-color: #ffffff #ffffff;
@@ -147,6 +150,10 @@
 .Form-Selection:focus {
     border: 2px solid white;
     border-radius: 20px;
+}
+
+.Form-Selection::placeholder {
+    color: white;
 }
 .Form-Selection datalist {
     text-align: center;
