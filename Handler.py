@@ -108,7 +108,7 @@ class _(SMTP):
                 req = string.format(r["Subject"].format('Declined'), self.Name,self.Date,self.Time)  
                 self.Config()
                 self.Send(self.Email, req)   
-        except Exception as e:
+        except TypeError as e:
             raise("An error occurred:", e)
 
         return
@@ -117,7 +117,7 @@ class _(SMTP):
         try:
             self.ehlo(); self.starttls(); self.ehlo()
             self.login("bernard.mantlaka@gmail.com", "rlpy dgvb rddv ksro")  
-        except Exception as e:
+        except TypeError as e:
             raise("An error occurred", e)
         return 
     
