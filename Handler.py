@@ -116,7 +116,7 @@ class _(SMTP):
     def Config(self):
         try:
             self.ehlo(); self.starttls(); self.ehlo()
-            self.login("bernard.mantlaka@gmail.com", "rlpy dgvb rddv ksro")  
+            self.login("bernard.mantlaka@gmail.com", "fxkt znvu phfk ukao")  
         except TypeError as e:
             raise("An error occurred", e)
         return 
