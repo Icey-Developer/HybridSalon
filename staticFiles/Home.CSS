@@ -1,16 +1,162 @@
 
-*{padding: 0; margin: 0; box-sizing: border-box;}
-body{height: 900px;}
-header {
-	background: url("./src/Background.png");
+*{padding: 0; margin: 0; list-style: none; text-decoration: none;}
+body{height: 900px; overflow-x: hidden;}
+
+body::-webkit-scrollbar {
+	width: 10px;
+	margin-right: 20px;
+}
+
+body::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 100vw;
+	margin-block: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+	scroll-margin-block: 20px;
+	background: transparent;
+	border-radius: 10px;
+	border: 2px solid rgb(0, 0, 0);
+
+}
+
+.Web-Title {
+	margin: auto;
+	width: 75%;
+	text-align: center;
+	font-family: 'Allura';
+	font-size: 70px;
+	margin-top: 2rem;
+	color: #ffffff;
+	
+}
+
+.Policy-Redirecter-button {
+	background-color: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 30px;
+	margin-bottom: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.Disclaimer-Title {
+	width: max-content;
+	text-align: center;
+	margin: auto;
+}
+
+.Main-Content {
+	display: flex;
+	height: 450px;
+	flex-wrap: nowrap;
+}
+
+.Main-header {
+	background: fixed radial-gradient(hotpink, white);
 	text-align: center;
 	width: 100%;
 	height: auto;
 	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
 	overflow: hidden;
 	border-radius: 0 0 +125% 85% / +35%;
+}
+
+.Sub-Content {
+	width: 2px;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.Disclaimer-Description {
+	width: 50%;
+	margin: auto;
+	position: relative;
+	text-wrap:pretty;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+	margin-left: 7rem;
+
+}
+
+.Header {
+    width: 100%;
+    height: 50px;
+}
+
+.Header > .Routes > ul {
+    list-style-type: none;
+    margin-left: auto; /* Adjusted */
+    float: right;
+    padding: 1rem; /* Adjust */
+
+}
+
+.Header > .Routes > ul > a {
+	display: block;
+    margin-left: 1rem;
+    float: left;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 4px solid rgb(0, 0, 0);
+	padding: 10px;
+}
+
+.Header > .Routes > ul > a:hover {
+	display: block;
+    margin-left: 1rem;
+    float: left;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+	border-left: 4px solid rgb(0, 0, 0);
+	border-bottom: 0px solid rgb(0, 0, 0);
+	border-right: 4px solid rgb(0, 0, 0);
+	padding: 10px;
+	transition: 0.1s;
+}
+
+.Header > .Routes > ul > a:default {
+	display: block;
+    margin-left: 1rem;
+    float: left;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+	border-left: 4px solid rgb(0, 0, 0);
+	border-bottom: 0px solid rgb(0, 0, 0);
+	border-right: 4px solid rgb(0, 0, 0);
+	padding: 10px;
+	transition: 0.2s;
+}
+
+body > h1 {
+	color: rgb(0, 0, 0);
+	text-align: center;
+	width: 40%;
+	padding: 5px;
+	font-size: 2rem;
+	margin: auto;
+	margin-top: 50px;
+	font-family: 'Allura';
+	border: 2px solid rgb(0, 0, 0);
+	margin-bottom: 50px;
+
 }
 
 fieldset > h3 {
@@ -23,26 +169,8 @@ fieldset > h3 {
 	text-align: center;
 	margin: auto;
 }
-
   
-  nav {
-	max-width: 960px;
-	mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
-	margin: 0 auto;
-	padding: 60px 0;
-  }
-  
-  nav ul {
-	text-align: center;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  }
-  
-  nav ul li {
-	display: inline-block;
-  }
-  
-  nav ul li a {
+  nav ul li a::before {
 	padding: 18px;
 	font-family: "Open Sans";
 	text-transform:uppercase;
@@ -53,63 +181,37 @@ fieldset > h3 {
 	font-family: Arial, Helvetica, sans-serif;
   }
   
-  nav ul li a:hover {
+  nav ul li a:hover::after {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 	background: rgba(255, 255, 255, 0.1);
 	color: rgba(0, 35, 122, 0.7);
   }
 
-h1 {
-	font-family: 'Allura';
-	font-size: 50px;
-	margin-bottom: 30px;
-	color: #ffffff;
-	
 
-}
-h3, p {
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 30px;
-}
-button {
-	border: none;
-	outline: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-	color: #333;
-	background: #fff;
-	margin-bottom: 50px;
-	box-shadow: 0 3px 20px 0 #0000003b;
-}
+
+
 button:hover{
 	cursor: pointer;
 
 }
 
 
-main h1 {
-	text-align: center;
-	margin: auto;
-	border-bottom: 4px solid black;
-}
-
-
-
 main section {
-	float: right;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100vw;
-	overflow-x: scroll;
+	overflow-x: auto;
     scroll-behavior: smooth;
+	border-bottom: 2px solid rgb(236, 236, 236);
+	
 }
 
 main hr {
 	width: 20px;
 }
-body h1 {
-	text-align: center;
-}
 
-main section > h2 {
+
+main > section > h2 {
 	color: white;
     stroke: hotpink;
     text-shadow: 
@@ -118,10 +220,16 @@ main section > h2 {
     0 0 0.2em rgb(255, 158, 247);
 	text-align: center;
 	margin: auto;
+	padding: 10px;
+	border-bottom: 2px solid rgb(252, 179, 255);
+	width: 220px;
 }
 
 main section > div {
-	float: left;flex: 1; flex-direction: row
+	
+	float: left;flex: 1; flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 main section > div > div {
@@ -163,3 +271,65 @@ main section > div > div div > h4{
 	text-align: start;
 }
 
+@media only screen and (max-width: 940px) {
+	.Main-Content {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	img {
+		width: 150px;
+		height: 150px;
+		margin: auto;
+	}
+
+	.Sub-Content {
+		width: 70%;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+	
+	}
+
+	.Disclaimer-Description {
+		width: 75%;
+		margin: auto;
+		position: relative;
+		text-wrap:pretty;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.Web-Title {
+		margin: auto;
+		width: 100%;
+		text-align: center;
+		font-family: 'Allura';
+		font-size: 50px;
+		margin-top: 0rem;
+		color: #ffffff;
+		
+	}
+
+	body > h1 {
+		color: rgb(0, 0, 0);
+		text-align: center;
+		width: 50%;
+		padding: 5px;
+		font-size: 2rem;
+		margin: auto;
+		margin-top: 50px;
+		font-family: 'Allura';
+		border: 2px solid rgb(0, 0, 0);
+		margin-bottom: 50px;
+	
+	}
+}
+
+
+@media only screen and (max-width: 615px) {
+	main section > div {
+		width: 100%;
+	}
+}
